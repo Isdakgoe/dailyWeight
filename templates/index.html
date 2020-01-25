@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>TRGE_体重管理</title>
+
+        <!-- jquery  -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+        <!-- bootstrap  -->
+        <script src="js/bootstrap.min.js"></script>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Canvas  -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js" type="text/javascript"></script>
+
+        <!-- Table  -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.0/css/theme.green.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.0/css/theme.default.min.css">
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.0/js/jquery.tablesorter.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.0/js/jquery.tablesorter.widgets.min.js"></script>
+    </head>
+
+    <body>
+        <!-- Trial -->
+        <div id="trial">
+            <form action="/login_manager" method="POST">
+                <input type="text" name="user_No" placeholder="背番号">
+                <input type="text" name="user_ID" placeholder="ログインID" hidden>
+                <input type="submit" value="login">
+            </form>
+        </div>
+
+
+
+        <table id="table1"  border="1" cellpadding="10">
+            <tr>
+                <th>店舗コード</th>
+                <th>品目</th>
+                <th>金額(円)</th>
+            </tr>
+            <tr>
+                <th>10</th>
+                <th>20</th>
+                <th>30</th>
+            </tr>
+        </table>
+        <div>
+            <b><a id="download" href="#" download="test.csv" onclick="handleDownload()">csvファイルダウンロード</a></b>
+        </div>
+
+    </body>
+</html>
+
